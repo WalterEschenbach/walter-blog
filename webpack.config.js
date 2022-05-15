@@ -14,6 +14,7 @@ module.exports = {
         port: 9000,
         historyApiFallback: true,
     },
+    mode: 'development',
     module: {
         rules: [
             {
@@ -26,7 +27,14 @@ module.exports = {
                     },
 
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    "css-loader"
+                ],
+            },
 
         ]
     },
