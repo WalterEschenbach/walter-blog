@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -8,14 +8,12 @@ import '../../styles.css'
 const NavBar = () => {
     const { panel, setPanel } = usePanels();
 
-
     function a11yProps(index) {
         return {
             id: `simple-tab-${index}`,
             'aria-controls': `simple-tabpanel-${index}`,
         };
     }
-
 
     const handleChange = (event, newValue) => {
         setPanel(newValue)
@@ -27,7 +25,6 @@ const NavBar = () => {
                 <Typography variant='h4'>Walter Eschenbach</Typography>
             </div>
             <div className="links">
-
                 <Tabs value={panel} onChange={handleChange} aria-label="basic tabs example">
                     <Tab label="blog" {...a11yProps(0)} />
                     <Tab label="projects" {...a11yProps(1)} />

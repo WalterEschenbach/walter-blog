@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Divider from '@mui/material/Divider'
 import { usePanels } from '../../contexts/PanelContext'
 import Tags from '../tags/Tags'
 
@@ -30,15 +31,26 @@ const Panels = () => {
     return (
         <>
             <TabPanel value={panel} index={0}>
-                <Tags />
                 <Typography variant='h1' component={'span'} >All Posts</Typography>
-
+                <Tags />
+                <br />
+                <Divider />
+                Blog
+                <Divider />
             </TabPanel>
             <TabPanel value={panel} index={1}>
-                Item Two
+                <Typography variant='h1' component={'span'} >All Projects</Typography>
+                <br />
+                <Divider />
+                Projects
+                <Divider />
             </TabPanel>
             <TabPanel value={panel} index={2}>
-                Item Three
+                <Typography variant='h1' component={'span'} >About</Typography>
+                <br />
+                <Divider />
+                About
+                <Divider />
             </TabPanel>
         </>
     )
